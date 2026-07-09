@@ -1,0 +1,804 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAXFMS | Professional Cleaning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;900&family=Nunito:wght@400;600;700&family=Rubik:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body
+    class="bg-slate-bg font-nunito text-zinc-800 antialiased selection:bg-primary/20 selection:text-primary"
+  >
+    <div id="root">
+      <div class="min-h-screen flex flex-col">
+        <link
+          rel="preload"
+          as="image"
+          href="assets/images/logo.png"
+          referrerpolicy="no-referrer"
+        />
+        <header
+          class="fixed top-0 w-full z-40 bg-white border-b border-zinc-200 shadow-xs transition-all duration-200 h-20"
+        >
+          <div
+            class="grid grid-cols-3 items-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto h-full"
+          >
+            <div class="flex items-center gap-2.5 col-start-1">
+              <a
+                class="flex items-center gap-2.5 active:scale-95 transition-transform cursor-pointer animate-fade-in"
+                href="/"
+                ><img
+                  src="assets/images/logo.png"
+                  alt="MMS - MAX Management Solutions Logo"
+                  referrerpolicy="no-referrer"
+                  class="h-16 w-16 object-contain rounded-lg"
+              /></a>
+            </div>
+            <nav
+              class="hidden md:flex items-center gap-1 lg:gap-2 justify-center col-start-2"
+            >
+              <a
+                class="px-4 py-2 rounded-lg font-nunito text-base transition-all duration-200 relative whitespace-nowrap text-zinc-600 hover:text-primary hover:bg-primary/5"
+                href="/"
+                >Home</a
+              ><a
+                class="px-4 py-2 rounded-lg font-nunito text-base transition-all duration-200 relative whitespace-nowrap text-zinc-600 hover:text-primary hover:bg-primary/5"
+                href="about"
+                >About Us</a
+              ><a
+                class="px-4 py-2 rounded-lg font-nunito text-base transition-all duration-200 relative whitespace-nowrap text-zinc-600 hover:text-primary hover:bg-primary/5"
+                href="products"
+                >Products</a
+              ><a
+                class="px-4 py-2 rounded-lg font-nunito text-base transition-all duration-200 relative whitespace-nowrap text-zinc-600 hover:text-primary hover:bg-primary/5"
+                href="services"
+                >Services</a
+              ><a
+                class="px-4 py-2 rounded-lg font-nunito text-base transition-all duration-200 relative whitespace-nowrap text-zinc-600 hover:text-primary hover:bg-primary/5"
+                href="testimonials"
+                >Testimonials</a
+              ><a
+                class="px-4 py-2 rounded-lg font-nunito text-base transition-all duration-200 relative whitespace-nowrap text-zinc-600 hover:text-primary hover:bg-primary/5"
+                href="portal"
+                >App Portal</a
+              ><a
+                class="px-4 py-2 rounded-lg font-nunito text-base transition-all duration-200 relative whitespace-nowrap text-zinc-600 hover:text-primary hover:bg-primary/5"
+                href="contact"
+                >Contact</a
+              >
+            </nav>
+            <div class="flex items-center justify-end col-start-3 gap-4">
+              <div class="hidden md:flex items-center gap-4"></div>
+              <div class="flex md:hidden items-center gap-3">
+                <button
+                  id="mobile-menu-toggle"
+                  class="text-zinc-650 p-2 rounded-md hover:bg-zinc-100 transition-colors"
+                  aria-label="Toggle Menu"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-menu w-6 h-6"
+                    aria-hidden="true"
+                  >
+                    <path d="M4 5h16"></path>
+                    <path d="M4 12h16"></path>
+                    <path d="M4 19h16"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </header>
+        <!-- Mobile Navigation Menu - Slide-in Drawer -->
+        <nav
+          id="mobile-menu"
+          class="fixed top-0 right-0 h-screen w-64 z-30 bg-white shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto md:hidden origin-right"
+        >
+          <!-- Menu Header -->
+          <div
+            class="sticky top-0 flex items-center justify-between p-4 border-b border-zinc-200 bg-gradient-to-r from-primary/5 to-primary/10"
+          >
+            <span class="font-rubik font-bold text-lg text-primary">Menu</span>
+          </div>
+
+          <!-- Navigation Links -->
+          <div class="py-4">
+            <a
+              class="block px-6 py-3 text-zinc-600 hover:text-primary hover:bg-primary/5 transition-colors border-l-4 border-transparent hover:border-primary"
+              href="/"
+              >Home</a
+            ><a
+              class="block px-6 py-3 text-zinc-600 hover:text-primary hover:bg-primary/5 transition-colors border-l-4 border-transparent hover:border-primary"
+              href="about"
+              >About Us</a
+            ><a
+              class="block px-6 py-3 text-zinc-600 hover:text-primary hover:bg-primary/5 transition-colors border-l-4 border-transparent hover:border-primary"
+              href="products"
+              >Products</a
+            ><a
+              class="block px-6 py-3 text-zinc-600 hover:text-primary hover:bg-primary/5 transition-colors border-l-4 border-transparent hover:border-primary"
+              href="services"
+              >Services</a
+            ><a
+              class="block px-6 py-3 text-zinc-600 hover:text-primary hover:bg-primary/5 transition-colors border-l-4 border-transparent hover:border-primary"
+              href="testimonials"
+              >Testimonials</a
+            ><a
+              class="block px-6 py-3 text-zinc-600 hover:text-primary hover:bg-primary/5 transition-colors border-l-4 border-transparent hover:border-primary"
+              href="portal"
+              >App Portal</a
+            ><a
+              class="block px-6 py-3 text-zinc-600 hover:text-primary hover:bg-primary/5 transition-colors border-l-4 border-transparent hover:border-primary"
+              href="contact"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Divider -->
+          <div class="border-t border-zinc-200"></div>
+
+          <!-- Contact Shortcuts -->
+          <div class="py-4 px-4">
+            <p class="px-2 mb-3 text-xs font-hanken font-bold text-zinc-400 uppercase tracking-widest">Quick Contact</p>
+            <a
+              href="tel:+919985071755"
+              class="flex items-center gap-3 px-4 py-3 mb-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-phone"
+              >
+                <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path>
+              </svg>
+              <div>
+                <p class="text-xs font-hanken font-bold uppercase tracking-wide">Call Us</p>
+                <p class="text-sm font-bold">+91 99850 71755</p>
+              </div>
+            </a>
+            <a
+              href="mailto:maxfmservices@gmail.com"
+              class="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-mail"
+              >
+                <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+              </svg>
+              <div>
+                <p class="text-xs font-hanken font-bold uppercase tracking-wide">Email</p>
+                <p class="text-sm font-bold">Contact Us</p>
+              </div>
+            </a>
+          </div>
+        </nav>
+        <main
+          class="flex-grow pt-24 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full"
+        >
+          <div class="animate-fade-in pt-6 md:pt-12 font-nunito">
+            <div
+              class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-24 max-w-6xl mx-auto"
+            >
+              <div class="lg:col-span-7 space-y-6 text-left">
+                <div
+                  class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold font-hanken uppercase tracking-wider"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-sparkles w-3.5 h-3.5"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"
+                    ></path>
+                    <path d="M20 2v4"></path>
+                    <path d="M22 4h-4"></path>
+                    <circle cx="4" cy="20" r="2"></circle></svg
+                  ><span>Upcoming Launch â€¢ Q3 2026</span>
+                </div>
+                <h1
+                  class="font-rubik text-4xl md:text-5xl lg:text-6xl font-bold text-zinc-900 tracking-tight leading-none"
+                >
+                  MAXFMS Mobile <br /><span
+                    class="bg-gradient-to-r from-primary to-primary-container bg-clip-text text-transparent"
+                    >At Your Fingertips</span
+                  >
+                </h1>
+                <p
+                  class="text-zinc-550 text-sm md:text-base leading-relaxed max-w-xl"
+                >
+                  We are supercharging the sanctuary experience. With our
+                  upcoming MAXFMS companion app, you can easily schedule
+                  professional cleaning crew members, manage recurring premium
+                  visits, and restock non-toxic plant-based essentials in
+                  real-time.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-2">
+                  <div
+                    class="flex items-center gap-2 px-4 py-2 border border-zinc-200 rounded-lg bg-zinc-50"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-smartphone w-5 h-5 text-zinc-450"
+                      aria-hidden="true"
+                    >
+                      <rect
+                        width="14"
+                        height="20"
+                        x="5"
+                        y="2"
+                        rx="2"
+                        ry="2"
+                      ></rect>
+                      <path d="M12 18h.01"></path>
+                    </svg>
+                    <div class="text-left">
+                      <span
+                        class="text-[10px] text-zinc-400 block uppercase font-bold tracking-wider"
+                        >Available soon on</span
+                      ><span class="text-xs font-bold text-zinc-800"
+                        >Apple App Store</span
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="flex items-center gap-2 px-4 py-2 border border-zinc-200 rounded-lg bg-zinc-50"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-play w-5 h-5 text-zinc-450 fill-current"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"
+                      ></path>
+                    </svg>
+                    <div class="text-left">
+                      <span
+                        class="text-[10px] text-zinc-400 block uppercase font-bold tracking-wider"
+                        >Available soon on</span
+                      ><span class="text-xs font-bold text-zinc-800"
+                        >Google Play Store</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="pt-6 border-t border-zinc-200/80 grid grid-cols-3 gap-6 max-w-md"
+                >
+                  <div>
+                    <span
+                      class="font-rubik text-2xl md:text-3xl font-bold text-primary"
+                      >01-Tap</span
+                    ><span
+                      class="text-[11px] font-bold text-zinc-400 block uppercase mt-0.5"
+                      >Quick Booking</span
+                    >
+                  </div>
+                  <div>
+                    <span
+                      class="font-rubik text-2xl md:text-3xl font-bold text-primary"
+                      >100%</span
+                    ><span
+                      class="text-[11px] font-bold text-zinc-400 block uppercase mt-0.5"
+                      >Eco-Friendly</span
+                    >
+                  </div>
+                  <div>
+                    <span
+                      class="font-rubik text-2xl md:text-3xl font-bold text-primary"
+                      >4.9â˜…</span
+                    ><span
+                      class="text-[11px] font-bold text-zinc-400 block uppercase mt-0.5"
+                      >Beta Rated</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="lg:col-span-5 flex justify-center">
+                <div
+                  class="relative w-80 h-[580px] bg-zinc-950 rounded-[40px] shadow-2xl p-3 border-4 border-zinc-800 flex flex-col justify-between overflow-hidden select-none ring-12 ring-zinc-900/5 hover:scale-103 transition-transform duration-300"
+                >
+                  <div
+                    class="absolute top-0 inset-x-0 h-6 bg-zinc-950 flex justify-center items-center z-20"
+                  >
+                    <div
+                      class="w-24 h-4 bg-black rounded-b-xl flex justify-center items-center"
+                    >
+                      <div class="w-8 h-1 bg-zinc-700 rounded-full mb-1"></div>
+                    </div>
+                  </div>
+                  <div
+                    class="w-full h-full bg-slate-bg rounded-[32px] pt-6 pb-2 px-3 flex flex-col justify-between overflow-hidden relative"
+                  >
+                    <div
+                      class="flex justify-between items-center py-2 border-b border-zinc-200/50"
+                    >
+                      <span
+                        class="font-rubik text-xs font-black tracking-tight text-primary"
+                        >MAXFMS Go</span
+                      >
+                      <div
+                        class="flex items-center gap-1.5 text-xs text-zinc-400 font-bold"
+                      >
+                        <span
+                          class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"
+                        ></span
+                        ><span>v1.0 BETA</span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex-grow py-3 overflow-y-auto space-y-3 font-nunito text-xs"
+                    >
+                      <div class="space-y-3 animate-fade-in text-left">
+                        <div
+                          class="bg-gradient-to-r from-primary to-primary-container text-white p-3 rounded-lg space-y-1 shadow-xs"
+                        >
+                          <h4 class="font-bold text-[13px]">
+                            Pristine Living Awaits
+                          </h4>
+                          <p class="text-[10px] text-white/90">
+                            Book premium non-toxic cleaning sessions or shop
+                            botanicals instantly.
+                          </p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 pb-2">
+                          <button
+                            class="bg-white p-2 rounded-lg border border-zinc-200/65 flex flex-col items-center text-center gap-1 font-bold text-zinc-700 hover:border-primary active:scale-95 transition-all outline-none"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="lucide lucide-calendar w-5 h-5 text-primary"
+                              aria-hidden="true"
+                            >
+                              <path d="M8 2v4"></path>
+                              <path d="M16 2v4"></path>
+                              <rect
+                                width="18"
+                                height="18"
+                                x="3"
+                                y="4"
+                                rx="2"
+                              ></rect>
+                              <path d="M3 10h18"></path></svg
+                            ><span>Book Visit</span></button
+                          ><button
+                            class="bg-white p-2 rounded-lg border border-zinc-200/65 flex flex-col items-center text-center gap-1 font-bold text-zinc-700 hover:border-primary active:scale-95 transition-all outline-none"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="lucide lucide-shopping-bag w-5 h-5 text-primary"
+                              aria-hidden="true"
+                            >
+                              <path d="M16 10a4 4 0 0 1-8 0"></path>
+                              <path d="M3.103 6.034h17.794"></path>
+                              <path
+                                d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"
+                              ></path></svg
+                            ><span>Buy Products</span>
+                          </button>
+                        </div>
+                        <div
+                          class="bg-white rounded-lg p-2.5 border border-zinc-200/65 space-y-2"
+                        >
+                          <span
+                            class="font-bold text-[11px] text-zinc-405 block uppercase tracking-wide"
+                            >Featured Clean Formula</span
+                          >
+                          <div class="flex gap-2">
+                            <div
+                              class="w-8 h-8 rounded bg-zinc-100 flex items-center justify-center font-bold text-primary font-mono text-[10px]"
+                            >
+                              SOAP
+                            </div>
+                            <div class="flex-1">
+                              <span class="font-bold text-[11px] text-zinc-800"
+                                >All-Purpose Lavender Extract</span
+                              ><span
+                                class="text-[10px] text-primary font-semibold block"
+                                >â‚¹599</span
+                              >
+                            </div>
+                          </div>
+                          <button
+                            class="w-full bg-zinc-905 hover:bg-black text-white py-1 rounded-md text-[10px] font-bold text-center"
+                          >
+                            Buy Formula
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="border-t border-zinc-200 pt-1.5 flex justify-around items-center shrink-0"
+                    >
+                      <button
+                        class="flex flex-col items-center gap-0.5 text-[9px] font-bold text-primary"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-smartphone w-4 h-4"
+                          aria-hidden="true"
+                        >
+                          <rect
+                            width="14"
+                            height="20"
+                            x="5"
+                            y="2"
+                            rx="2"
+                            ry="2"
+                          ></rect>
+                          <path d="M12 18h.01"></path></svg
+                        ><span>Main</span></button
+                      ><button
+                        class="flex flex-col items-center gap-0.5 text-[9px] font-bold text-zinc-400"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-calendar w-4 h-4"
+                          aria-hidden="true"
+                        >
+                          <path d="M8 2v4"></path>
+                          <path d="M16 2v4"></path>
+                          <rect
+                            width="18"
+                            height="18"
+                            x="3"
+                            y="4"
+                            rx="2"
+                          ></rect>
+                          <path d="M3 10h18"></path></svg
+                        ><span>Schedules</span></button
+                      ><button
+                        class="flex flex-col items-center gap-0.5 text-[9px] font-bold text-zinc-400"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-shopping-bag w-4 h-4"
+                          aria-hidden="true"
+                        >
+                          <path d="M16 10a4 4 0 0 1-8 0"></path>
+                          <path d="M3.103 6.034h17.794"></path>
+                          <path
+                            d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"
+                          ></path></svg
+                        ><span>Botanicals</span>
+                      </button>
+                    </div>
+                    <div class="flex justify-center pt-2">
+                      <div class="w-24 h-1 bg-zinc-300 rounded-full"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <section class="mb-24 space-y-16">
+              <div class="text-center max-w-xl mx-auto space-y-2">
+                <h2
+                  class="font-rubik text-3xl font-bold tracking-tight text-zinc-900"
+                >
+                  Why Download MAXFMS Go?
+                </h2>
+                <p class="text-zinc-500 text-sm">
+                  Designed to bring simplicity, cleanliness, and ecological
+                  responsibility right into your hands.
+                </p>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div
+                  class="bg-white border border-zinc-200/80 rounded-xl p-6 md:p-8 space-y-4 shadow-xs text-left"
+                >
+                  <div
+                    class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary border border-primary/10"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-calendar w-6 h-6"
+                      aria-hidden="true"
+                    >
+                      <path d="M8 2v4"></path>
+                      <path d="M16 2v4"></path>
+                      <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                      <path d="M3 10h18"></path>
+                    </svg>
+                  </div>
+                  <h3 class="font-rubik text-lg font-bold text-zinc-900">
+                    Seamless Instant Booking
+                  </h3>
+                  <p class="text-zinc-500 text-xs md:text-sm leading-relaxed">
+                    No long back-and-forth phone negotiations. Select your
+                    preferred date, configure room layouts/instructions, and
+                    secure flat-rate instant bookings in under 60 seconds.
+                  </p>
+                </div>
+                <div
+                  class="bg-white border border-zinc-200/80 rounded-xl p-6 md:p-8 space-y-4 shadow-xs text-left"
+                >
+                  <div
+                    class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary border border-primary/10"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-shopping-bag w-6 h-6"
+                      aria-hidden="true"
+                    >
+                      <path d="M16 10a4 4 0 0 1-8 0"></path>
+                      <path d="M3.103 6.034h17.794"></path>
+                      <path
+                        d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <h3 class="font-rubik text-lg font-bold text-zinc-900">
+                    Eco-Botanicals Shop
+                  </h3>
+                  <p class="text-zinc-500 text-xs md:text-sm leading-relaxed">
+                    Running low on your favorite zero-waste, lavender
+                    multi-surface cleansers? Replenish supplies with one tap, or
+                    toggle on automatic eco-subscriptions for steady sanitizing.
+                  </p>
+                </div>
+                <div
+                  class="bg-white border border-zinc-200/80 rounded-xl p-6 md:p-8 space-y-4 shadow-xs text-left"
+                >
+                  <div
+                    class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary border border-primary/10"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-shield-check w-6 h-6"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                      ></path>
+                      <path d="m9 12 2 2 4-4"></path>
+                    </svg>
+                  </div>
+                  <h3 class="font-rubik text-lg font-bold text-zinc-900">
+                    Clean Technician Tracking
+                  </h3>
+                  <p class="text-zinc-550 text-xs md:text-sm leading-relaxed">
+                    Keep oversight over real-time schedules. Receive push
+                    reminders as your eco-specialists head out, view
+                    coordinates, and check exact completion reports with digital
+                    receipt cards.
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
+        </main>
+        <footer
+          class="bg-zinc-150/70 border-t border-border-soft w-full py-16 mt-auto"
+        >
+          <div
+            class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto mb-12"
+          >
+            <div class="space-y-4 col-span-1 md:col-span-1">
+              <a
+                class="font-rubik text-2xl font-bold bg-gradient-to-r from-primary to-primary-container bg-clip-text text-transparent flex items-center gap-1 cursor-pointer outline-none active:scale-95 transition-transform"
+                href="/"
+                >MAXFMS</a
+              >
+              <p
+                class="font-nunito text-sm text-zinc-500 leading-relaxed max-w-xs"
+              >
+                Passion of Cleaning.
+              </p>
+              <p
+                class="font-nunito text-sm text-zinc-500 leading-relaxed max-w-xs"
+              >
+                Bringing the MAXFMS standard of absolute facility care and
+                integrated solutions to your residential and commercial spaces.
+              </p>
+            </div>
+            <div class="space-y-4">
+              <h4
+                class="font-hanken font-bold text-xs text-zinc-750 uppercase tracking-widest"
+              >
+                Company
+              </h4>
+              <ul class="space-y-2.5 font-nunito text-sm">
+                <li>
+                  <a
+                    class="text-zinc-500 hover:text-primary transition-colors cursor-pointer outline-none"
+                    href="about"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-zinc-500 hover:text-primary transition-colors cursor-pointer outline-none"
+                    href="testimonials"
+                    >Testimonials</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-zinc-500 hover:text-primary transition-colors cursor-pointer outline-none"
+                    href="portal"
+                    >App Portal</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-zinc-500 hover:text-primary transition-colors cursor-pointer outline-none"
+                    href="services"
+                    >Service Areas</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="space-y-4">
+              <h4
+                class="font-hanken font-bold text-xs text-zinc-750 uppercase tracking-widest"
+              >
+                Support
+              </h4>
+              <ul class="space-y-2.5 font-nunito text-sm">
+                <li>
+                  <button
+                    class="text-zinc-500 hover:text-primary transition-colors cursor-pointer outline-none"
+                  >
+                    FAQ &amp; Support Ticket
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="space-y-4">
+              <h4
+                class="font-hanken font-bold text-xs text-zinc-750 uppercase tracking-widest"
+              >
+                Our Ecosystem
+              </h4>
+              <p class="font-nunito text-xs text-zinc-450 leading-relaxed">
+                Fully certified by international sanitary councils and carbon
+                offset credits groups.
+              </p>
+            </div>
+          </div>
+          <div
+            class="mt-12 pt-8 border-t border-zinc-200 text-center font-nunito text-xs text-zinc-450 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-2"
+          >
+            <div>
+              Â© 2026 MAXFMS Facility Management Services. All rights reserved.
+            </div>
+            <div>
+              Designed and developed by <!-- -->
+              <a
+                href="https://wa.me/7207667827"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-primary hover:underline"
+                >Ithish Jonnes</a
+              >
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
+

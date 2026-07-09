@@ -1,0 +1,12 @@
+{
+  "name": "maxfms-html",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "echo 'No build required'",
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
