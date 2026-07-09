@@ -1,6 +1,8 @@
 # MAXFMS Website
 
-This website was designed and developed by Ithish Jonnes. All design and development rights belong to Ithish Jonnes.
+# Credits
+Designed and developed by Ithish Jonnes.
+Contact: 7207667827
 
 ## Run Locally
 
