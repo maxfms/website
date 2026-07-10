@@ -225,4 +225,59 @@ document.addEventListener('DOMContentLoaded', () => {
             link.setAttribute('href', fallback);
         }
     });
+
+    // Quote Estimator Functionality
+    const areaRangeInput = document.getElementById('area-size-range');
+    const serviceTypeButtons = document.querySelectorAll('.grid.grid-cols-2.gap-3.bg-zinc-100.rounded-lg.p-1 button');
+    const priceDisplay = document.querySelector('.inline-block.text-4xl.md\\:text-5xl.font-bold.font-rubik.text-primary');
+    const areaSizeDisplay = document.querySelector('.text-sm.font-bold.text-primary.font-nunito');
+
+    if (areaRangeInput && serviceTypeButtons.length >= 2 && priceDisplay && areaSizeDisplay) {
+        let currentServiceType = 'Residential'; // Default service type
+
+        const pricePerSqFt = {
+            'Residential': 12,
+            'Commercial': 15
+        };
+
+        const updateQuote = () => {
+            const areaSize = parseInt(areaRangeInput.value);
+            const priceRate = pricePerSqFt[currentServiceType];
+            const totalPrice = areaSize * priceRate;
+
+            // Format number with commas
+            const formattedPrice = totalPrice.toLocaleString('en-IN');
+            
+            // Update displays
+            areaSizeDisplay.textContent = areaSize.toLocaleString('en-IN') + ' sq. ft.';
+            priceDisplay.textContent = '₹' + formattedPrice;
+        };
+
+        // Handle service type button clicks
+        serviceTypeButtons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                // Remove active state from all buttons
+                serviceTypeButtons.forEach(btn => {
+                    btn.classList.remove('bg-white', 'text-primary', 'shadow-xs');
+                    btn.classList.add('text-zinc-500', 'hover:text-zinc-700');
+                });
+
+                // Add active state to clicked button
+                button.classList.add('bg-white', 'text-primary', 'shadow-xs');
+                button.classList.remove('text-zinc-500', 'hover:text-zinc-700');
+
+                // Update service type
+                currentServiceType = button.textContent.trim();
+
+                // Update quote
+                updateQuote();
+            });
+        });
+
+        // Handle area size slider changes
+        areaRangeInput.addEventListener('input', updateQuote);
+
+        // Initialize with default values
+        updateQuote();
+    }
 });
